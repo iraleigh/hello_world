@@ -83,18 +83,6 @@ function display_winning_combos() {
 
 var has_voted = false;
 
-var count = 30;
-var counter = setInterval(timer, 1000); //1000 will run it every 1 second
-
-function timer() {
-  count = count - 1;
-  if (count <= 0) {
-    clearInterval(counter);
-    return;
-  }
-  $('#timer').html('00:' + count);
-}
-
 function display_game_id() {
   $('#game-id').append(current_game_state.id);
 }

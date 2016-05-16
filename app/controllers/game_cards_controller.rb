@@ -15,10 +15,10 @@ class GameCardsController < ApplicationController
 		cards = params[:cards]
 		round = Round.where("game_id=?",game_user.game.id).order("created_at").last
 		ActiveRecord::Base.transaction do
-  			cards.each {|gcard_id|
+  			cards.each { |gcard_id|
   				rc = RoundCard.new
   				rc.round_id =  round.id, 
-  				card_id =  GameCard.find gcard_id.card_id
+  				card_id =  GameCard.find(gcard_id.card_id)
   				rc.game_user_id = game_user.id
   				rc.save
   				GameCard.where(:id => cards).destroy_all

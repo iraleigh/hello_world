@@ -13,6 +13,7 @@
 // = require jquery
 // = require jquery_ujs
 // = require turbolinks
+// = require_tree .
 // = require jquery-1.11.1.js
 // = require jquery.isotope.js
 // = require appear.min.js
@@ -22,4 +23,4 @@
 // = require jquery.vegas.min.js
 // = require jquery.fancybox.js
 // = require jquery.fancybox.pack.js
-// = require_tree .
+

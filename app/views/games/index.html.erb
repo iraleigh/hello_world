@@ -9,40 +9,13 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">
         <div id="carousel-slider" data-ride="carousel" class="carousel slide  animate-in" data-anim-type="fade-in-up">
-          <div class="carousel-inner">
-            <div class="item active">
-              <h3>
-                This will be a winning card combination.
-              </h3>
-              <p>
-                Lorem ipsumdolor sitamet, consect adipiscing elit
-                Lorem ipsumdolor sitamet, consect adipiscing elit.
-                Lorem ipsumdolor sitamet, consect adipiscing elit
-                Lorem ipsumdolor sitamet, consect adipiscing elit.
-              </p>
-            </div>
-            <div class="item">
-              <h3>
-                This will be another one!
-              </h3>
-              <p>
-                Lorem ipsumdolor sitamet, consect adipiscing elit
-                Lorem ipsumdolor sitamet, consect adipiscing elit.
-                Lorem ipsumdolor sitamet, consect adipiscing elit
-                Lorem ipsumdolor sitamet, consect adipiscing elit.
-              </p>
-            </div>
+          <div class="carousel-inner" id="winning-combo-carousel">
+
           </div>
         </div>
       </div>
     </div>
-    <div class="row animate-in" data-anim-type="fade-in-up">
-      <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2 scroll-me">
-        <p>
-          This line is fixed so you can write anything
-        </p>
-      </div>
-    </div>
+
   </div>
 </div>
 
@@ -50,33 +23,33 @@
 
 <!--GRID SECTION START-->
 
-  
 
-<section id="grid" >
+
+<section id="grid">
   <div class="container">
-    
+
     <div class="row text-center header animate-in" data-anim-type="fade-in-up">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <h3><%= link_to "Create Game", controller: "games", action: "new" %></h3>
-        <hr />
+        <hr/>
         <h3>Open Games</h3>
       </div>
     </div>
-    
+
     <div class="row pad-bottom animate-in" data-anim-type="fade-in-up">
       <% @records.each_pair do |game_id, players| %>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <h2>Open Game</h2>
-          <ul> 
-             <li class="open-game-id"><%= game_id%></li>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <h2>Open Game</h2>
+            <ul>
+              <li class="open-game-id"><%= game_id %></li>
               <% players.each do |player| %>
-              <li><%= player%></li>
+                  <li><%= player %></li>
               <% end %>
 
               <button type="button" class="btn button-custom btn-custom-two join_button">Join</button>
 
-          </ul>
-        </div>
+            </ul>
+          </div>
       <% end %>
     </div>
   </div>

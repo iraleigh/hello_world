@@ -17,7 +17,8 @@ def index offsetV=0
 end
 
 
-def new 
+def new
+
   if current_user.nil?
     puts current_user.nil?
     redirect_to :controller => 'users', :action => 'sign_in'  
